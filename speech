@@ -1,0 +1,9 @@
+import speech_recognition as sr
+r = sr.Recognizer()
+audio = '/home/hamis/Downloads/MKH800_19_0001.wav'
+with sr.AudioFile(audio) as source:
+    audio = r.record(source)
+type(audio)
+u = r.recognize_google(audio)
+print(u)
+
